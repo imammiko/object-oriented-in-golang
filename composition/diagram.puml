@@ -1,0 +1,28 @@
+@startuml
+
+    class Laptop {
+        -merk : string
+        -kode : string
+        -cpu : CPU
+        -vga : VGA
+        +NewLaptop(merk : string, kode : string)
+        +AddKomponen(cpu : CPU, vga : VGA)
+        +displayData() : void
+    }
+
+    class CPU {
+        -nama : string
+        +NewCPU(nama : string)
+        +GetNama() : string
+    }
+
+    class VGA {
+        -nama : string
+        -kapasitas : int
+        +NewVGA(nama : string, kapasitas : int)
+        +GetNama() : string
+        +GetKapasitas() : int
+    }
+
+
+@enduml

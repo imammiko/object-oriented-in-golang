@@ -1,0 +1,27 @@
+@startuml
+
+    class Jurusan{
+        -kode : String
+        -nama : String
+        -daftarMhs[] : Mahasiswa
+        -jmlMhs :interface
+        +NewJurusan(kode : String, nama : String) : void
+        +GetKode() : string
+        +GetNama() : string
+        +GetJmlMhs() : int
+        +GetDaftarMhs() : Mahasiswa[]
+        +AddMahasiswa(m : Mahasiswa) : void
+    }
+
+    class Mahasiswa{
+        -nim : string
+        -nama : string
+        +SetNim(nim : string) : void
+        +SetNama(nama : string) : void
+        +GetNim() : string
+        +GetNama() : string
+    }
+
+
+ Jurusan o-- Mahasiswa : "1..*"
+@enduml

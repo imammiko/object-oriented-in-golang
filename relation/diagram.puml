@@ -1,0 +1,27 @@
+@startuml
+    
+    class Dosen {
+        - nidn : String
+        - nimMhs[] : string
+        - jmlMhs : int
+        + SetNidn(in nidn : String) : void
+        + GetNidn() : String
+        + SetNimMhs(in nimMhs : String) : void
+        + getNimMhs(in indeks : int) : String
+    }
+
+    class Mahasiswa {
+    -nim : String
+    -nama : String
+    -prodi : String
+    + SetNim(in nim : String) : void
+    + GetNim() : return
+    + SetNama(in nama : String) : void
+    + GetNama() : return
+    }
+    
+
+    Dosen --> Mahasiswa : "1" *-- "M"
+
+
+@enduml
